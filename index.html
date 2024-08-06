@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Buttons</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color:burlywood;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        .button:hover {
+            background-color:cadetblue;
+        }
+
+        .random-button {
+            position: absolute;
+            background-color: burlywood;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: default;
+            margin-left: 39%;
+            margin-top:312px;
+        }
+        .random-button:hover {
+            background-color:cadetblue;
+        }
+
+    .cont-2{
+        position:absolute;
+        left: 43%;
+        top: 30%;
+        text-align: center;
+        transform: translateX(50%,50%);
+        display: flex;
+    }
+    .cont-2 p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .cont-1{
+        position:absolute;
+        left: 37%;
+        text-align: center;
+        display: flex;
+    }
+    .cont-1 p{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .cont-1-1{
+        position:absolute;
+        left: 30%;
+        top:10% ;
+        text-align: center;
+        display: flex;
+    }
+    .cont-1-1 p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="cont-1">
+        <p>Welcome to Salman website</p>
+    </div>
+    <div class="cont-1-1">
+        <p>Answer this simple question to redirect you to my website</p>
+    </div>
+    <div class="cont-2">
+    <p>Are You Gay?</p>
+    <a href="#" class="button">YES</a>
+    </div>  
+    
+    <div class="random-button">NO</div>
+    
+
+    <script>
+        // Random button movement
+        var s = window.innerWidth;
+        s= 370 ;
+        var ss = window.innerHeigh;
+        ss= 500 ;
+        const randomButton = document.querySelector('.random-button');
+        randomButton.addEventListener('mouseover', () => {
+            randomButton.style.left = Math.floor(Math.random() * (s - randomButton.offsetWidth)) + 'px';
+            randomButton.style.top = Math.floor(Math.random() * (ss - randomButton.offsetHeight)) + 'px';
+        });
+    </script>
+</body>
+
+</html>
